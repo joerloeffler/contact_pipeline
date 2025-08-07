@@ -1,4 +1,4 @@
-# MD Contact & Interaction Energy Analysis Pipeline 🔬
+# MD Contact & Interaction Energy Analysis Pipeline
 
 This repository contains a Python-based workflow designed to analyze molecular dynamics (MD) trajectories. The pipeline identifies key interacting residues between two molecular selections, quantifies their contact frequency, and sets up calculations to determine their non-bonded interaction energies (Electrostatics and van der Waals) using cpptraj.
 
@@ -21,14 +21,15 @@ The primary goal is to automate the process of pinpointing residues that maintai
 - Python libraries: pandas (install via `pip install pandas`)
 - getcontacts[https://github.com/getcontacts/getcontacts]
 
-## 🚀 Usage
+## Usage
 
 1. Prepare a `config.json` file with paths and parameters.
 2. Run the pipeline with:
+```bash
+python full_pipeline.py config.json
+```
 
-    python full_pipeline.py config.json
-
-## 📜 Workflow Summary
+## Workflow Summary
 
 1. Calculate dynamic contacts
 2. Compute contact frequencies
@@ -39,13 +40,14 @@ The primary goal is to automate the process of pinpointing residues that maintai
 7. Run cpptraj and summarize interaction energies (if enabled)
 
 ## 📂 Output Files
-
-- `dynamic_contacts.tsv`
-- `contact_frequencies.tsv`
-- `reference.pdb`
-- `*_bfac.pdb`
-- `/energies/lie_script.in`
-- `/energies/int_*.dat`
-- `/energies/ele_summary.csv`
+```bash
+- dynamic_contacts.tsv
+- contact_frequencies.tsv
+- reference.pdb
+- *_bfac.pdb
+- /energies/lie_script.in
+- /energies/int_*.dat`
+- /energies/ele_summary.csv
+```
 - `/energies/vdw_summary.csv`
-"""
+
