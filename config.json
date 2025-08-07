@@ -1,0 +1,27 @@
+{
+  "topology_file": "combined.parm7",
+  "trajectory_file": "combined.xtc",
+  "output_dir": "contacts",
+
+  "dynamic_contacts": {
+    "itypes": "hb sb",
+    "selection1": "residue 1 to 232 and not solvent",
+    "selection2": "residue 233 to 244",
+    "output_tsv": "combined_hb_sb.tsv"
+  },
+
+  "frequency_analysis": {
+    "output_freq_tsv": "combined_hb_sb_freq.tsv"
+  },
+
+  "pdb_generation": {
+    "output_pdb": "map.pdb"
+  },
+
+  "bfactor_filtering": {
+    "bfactor_threshold": 0.1,
+    "output_script": "lie_script.in"
+  },
+
+  "calculate_energies": true
+}
